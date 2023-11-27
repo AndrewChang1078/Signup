@@ -20,7 +20,7 @@ login_btn.click()
 driver.execute_script("window.open('');")
 driver.switch_to.window(driver.window_handles[1])
 driver.get('https://www.signupgenius.com/go/10C084DABAD2BA7F9C34-cubicle1#/')
-driver.implicitly_wait(5000)
+driver.implicitly_wait(2)
 my_seat_btns=driver.find_elements('xpath', "//*[text()='"+my_seat_num+"']/../../../../preceding-sibling::div[1]/signup-button/button")
 for my_seat_btn in my_seat_btns:
     if 'Sign Up' in my_seat_btn.text:
